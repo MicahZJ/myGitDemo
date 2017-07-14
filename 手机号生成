@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    ul li{
+        list-style: none;
+    }
+    </style>
+</head>
+
+<body>
+    <ul class="autoNum">
+
+    </ul>
+    <script>
+        var nn = document.getElementsByClassName("autoNum")[0];
+        var numObj = [];
+        var timer;
+        auto();
+
+        function auto() {
+            timer = setInterval(autoNum1, 100);
+
+        }
+
+
+        function autoNum1() {
+            var nuM = [];
+
+            // var numObj= new object();
+            for (var i = 0; i < 11; i++) {
+                var num = Math.floor(Math.random() * 10);
+                nuM.unshift(num);
+
+            }
+            nuM = nuM.join("");
+
+            if ((/^1[34578]\d{9}$/.test(nuM))) {
+                // alert("找到了");
+                nuM = nuM.toString();
+                var node = document.createElement("li"); //创建一个li节点
+                var textnode = document.createTextNode(nuM); //创建一个文本节点内容
+                node.appendChild(textnode); //将文本节点内容，添加到li节点里面
+                // document.getElementById("test").appendChild(node); //将li节点，添加到test几点下面
+                // var createNum = "<li>" + nuM + "</p>";
+                nn.appendChild(node);
+            }
+            
+
+        }
+    </script>
+</body>
+
+</html>
