@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn" value="">开始生成电话号码</button>
+    <button class="btn1" value="">停止</button>
+    <button class="btn2" value="">清除页面</button>
+    <ul class="autoNum"></ul>
+
+    <script>
+        var nn = document.getElementsByClassName("autoNum")[0];
+        var liLength = document.getElementsByTagName("li");
+        var btnOn = document.getElementsByClassName("btn")[0];
+        var btnOn1 = document.getElementsByClassName("btn1")[0];
+        var btnOn2 = document.getElementsByClassName("btn2")[0];
+        var numObj = [];
+        var timer;
+        
+        btnOn.addEventListener('click', function () {
+            console.log("function starT");
+            timer = setInterval(function () {
+                autoNum1();
+                autoStop(timer);
+            }, 100);
+        }, false);
+
+        btnOn1.addEventListener('click', function () {
+            clearInterval(timer);
+            console.log(liLength.length);
+        }, false);
+
+        btnOn2.addEventListener('click', function () {
+            clearInterval(timer);
+            clearNum();
+        }, false);
+
+        function clearNum() {
+            console.log(liLength.length);
+            for (var i= liLength.length-1;i>=0; i--) {
+                
+                nn.removeChild(nn.childNodes[i]);
+            }
+        }
+
+        function autoStop(timer) {
+
+            if (liLength.length > 10) {
+                clearInterval(timer);
+                console.log("到11了,STOP");
+            }
+
+        }
+ 
+
+        function autoNum1() {
+            console.log("电话号码开始生成")
+            var nuM = [];
+
+            // var numObj= new object();
+            for (var i = 0; i < 11; i++) {
+                var num = Math.floor(Math.random() * 10);
+                nuM.unshift(num);
+
+            }
+            nuM = nuM.join("");
+ 
+            if ((/^1[34578]\d{9}$/.test(nuM))) {
+                // alert("找到了");
+                nuM = nuM.toString();
+                var node = document.createElement("li"); //创建一个li节点
+                var textnode = document.createTextNode(nuM); //创建一个文本节点内容
+                node.appendChild(textnode); //将文本节点内容，添加到li节点里面
+                // document.getElementById("test").appendChild(node); //将li节点，添加到test几点下面
+                // var createNum = "<li>" + nuM + "</p>";
+                nn.appendChild(node);
+            }
+        }
+    </script>
+</body>
+
+</html>
