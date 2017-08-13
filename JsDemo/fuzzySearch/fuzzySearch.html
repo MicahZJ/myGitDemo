@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>模糊查询</title>
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        ul {
+            padding-top: 20px;
+            width: 100%;
+            margin: 0 50% 0 0;
+        }
+
+        li {
+            padding: 3px;
+            border: 1px solid silver;
+        }
+
+        .leftDiv {
+            margin-left: 100px;
+            width: 200px;
+            float: left;
+        }
+
+        .leftDiv ul {
+            margin-left: 41px;
+        }
+
+        .leftDiv ul li {
+            width: 110px;
+        }
+
+        .rightDiv {
+            width: 200px;
+            margin-left: 500px;
+            padding-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="leftDiv">
+        <span>可以查询下面的信息</span>
+        <ul>
+            <li>孔子</li>
+            <li>老子</li>
+            <li>庄子</li>
+            <li>孟子</li>
+            <li>荀子</li>
+            <li>月光</li>
+            <li>日光</li>
+            <li>日月为明</li>
+            <li>简单</li>
+        </ul>
+    </div>
+    <div class="rightDiv">
+        <span>在下面的输入框中输入</span>
+        <input type="text" id="txt">
+
+        <ul id="list">
+        </ul>
+    </div>
+    <script src="./fuzzySearch.js"></script>
+</body>
+
+</html>
