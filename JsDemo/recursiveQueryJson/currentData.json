@@ -1,0 +1,113 @@
+[{
+    "MenuCode": "S0-3100-00",
+    "MenuAction": "TelPay",
+    "MenuName": "通讯费",
+    "subMenu": [{
+        "MenuCode": "S0-3100-01",
+        "MenuAction": "ChinaMobileTelBalQryInitAct",
+        "MenuName": "中国移动"
+    }, {
+        "MenuCode": "S0-3100-02",
+        "MenuAction": "UnicomTelBalQryInitAct",
+        "MenuName": "中国联通"
+    }, {
+        "MenuCode": "S0-3100-03",
+        "MenuAction": "TelecomTelBalQryInitAct",
+        "MenuName": "中国电信"
+    }]
+}, {
+    "MenuCode": "S0-3200-00",
+    "MenuAction": "PowerPayInitAct",
+    "MenuName": "电费",
+    "subMenu": [{
+        "MenuCode": "S0-3210-00",
+        "MenuAction": "SmartPowerCardInitAct",
+        "MenuName": "智能电能表充值",
+        "subMenu": [{
+            "MenuCode": "S0-3210-01",
+            "MenuAction": "SmartPowerCardPayInitAct",
+            "MenuName": "购电卡充值"
+        }, {
+            "MenuCode": "S0-3210-02",
+            "MenuAction": "SmartPowerCardQueryInitAct",
+            "MenuName": "购电卡查询"
+        }, {
+            "MenuCode": "S0-3210-03",
+            "MenuAction": "SmartPowerCardRewriteInitAct",
+            "MenuName": "购电卡补写"
+        }]
+    }, {
+        "MenuCode": "S0-3220-00",
+        "MenuAction": "ElectricChargeInitAct",
+        "MenuName": "电能表无卡充值",
+        "subMenu": [{
+            "MenuCode": "S0-3220-01",
+            "MenuAction": "ElectricChargeQryInitAct",
+            "MenuName": "购电充值"
+        }, {
+            "MenuCode": "S0-3220-02",
+            "MenuAction": "ElectricChargeMsgRegInitAct",
+            "MenuName": "短信订阅"
+        }]
+    }]
+}, {
+    "MenuCode": "S0-3300-00",
+    "MenuAction": "HeatingPayInitAct",
+    "MenuName": "取暖费",
+    "subMenu": [{
+        "MenuCode": "S0-3300-04",
+        "MenuAction": "JinNengHeatingQryInitAct",
+        "MenuName": "天津能源缴费"
+    }]
+}, {
+    "MenuCode": "S0-3400-00",
+    "MenuAction": "CablePayInitAct",
+    "MenuName": "有线电视费",
+    "subMenu": [{
+        "MenuCode": "S0-3400-01",
+        "MenuAction": "GuangDianCableQryInitAct",
+        "MenuName": "广电有线缴费"
+    }, {
+        "MenuCode": "S0-3400-02",
+        "MenuAction": "TedaCableQryInitAct",
+        "MenuName": "泰达有线缴费"
+    }]
+}, {
+    "MenuCode": "S0-3000-01",
+    "MenuAction": "ETCLoadInitAct",
+    "MenuName": "ETC卡充值"
+}, {
+    "MenuCode": "S0-3500-00",
+    "MenuAction": "WaterPayInitAct",
+    "MenuName": "水费",
+    "subMenu": [{
+        "MenuCode": "S0-3500-01",
+        "MenuAction": "JinNanWaterQryInitAct",
+        "MenuName": "津南水费缴费"
+    }]
+}, {
+    "MenuCode": "S0-3000-03",
+    "MenuAction": "GasPayInitAct",
+    "MenuName": "燃气费"
+}, {
+    "MenuCode": "S0-3000-04",
+    "MenuAction": "CommonPayInitAct",
+    "MenuName": "通用缴费"
+}, {
+    "MenuCode": "S0-3600-00",
+    "MenuAction": "CityCardInitAct",
+    "MenuName": "城市一卡通充值",
+    "subMenu": [{
+        "MenuCode": "S0-3600-01",
+        "MenuAction": "CityCardPayInitAct",
+        "MenuName": "城市卡充值"
+    }, {
+        "MenuCode": "S0-3600-02",
+        "MenuAction": "CityCardRewriteInitAct",
+        "MenuName": "城市卡补写卡"
+    }]
+}, {
+    "MenuCode": "S0-3000-05",
+    "MenuAction": "SocialSecurityQryInitAct",
+    "MenuName": "社保缴费"
+}]
