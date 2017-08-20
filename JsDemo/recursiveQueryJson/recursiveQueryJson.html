@@ -188,12 +188,14 @@
     var query = [
         'S0-3400-00', 'S0-3100-03', 'S0-3210-02', 'S0-3210-03', 'S0-3000-05', 'S0-3300-04'
     ];
-
+    document.body.innerHTML +="<div>现在要在Json树中查询是否含有这些节点"+ "</br>"+"'S0-3400-00', 'S0-3100-03', 'S0-3210-02', 'S0-3210-03', 'S0-3000-05', 'S0-3300-04'</div>";
+    document.body.innerHTML+="<div>查询开始</div>"+"</br>";
     //打印结果
     for (var i = 0; i < query.length; i++) {
         node = null;
         parentNode = null;
         var obj = getNode(json, query[i]);
+        
         document.body.innerHTML += "<div>"+ "查询nodeId:"+query[i]+", 结果:"+obj.node.MenuCode+",name:"+obj.node.MenuName+" -> 父级:"+(obj.parentNode ? obj.parentNode.MenuName : "木有父级!")+"</div>";
         //console.log("查询nodeId:" + query[i] + ", 结果:" + obj.node.MenuCode + ",name:" + obj.node.MenuName + " -> 父级:" + (obj.parentNode ? obj.parentNode.MenuName : '木有父级!'));
     }
